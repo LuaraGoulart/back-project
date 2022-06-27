@@ -1,0 +1,16 @@
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/service/SegurancaServiceImpl.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/service/SegurancaService.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/security/JwtAuthenticationFilter.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/security/Login.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/controller/UsuarioController.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/security/JwtUtils.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/controller/View.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/security/SecurityConfig.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/entity/Usuario.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/repository/UsuarioRepository.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/entity/Autorizacao.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/repository/AutorizacaoRepository.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/controller/HomeController.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/controller/LoginController.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/exception/RegistroNaoEncontradoException.java
+/home/anderson/Documentos/luara/spring-boot-app/spring-boot-app/src/main/java/br/gov/sp/fatec/springbootapp/SpringBootAppApplication.java
