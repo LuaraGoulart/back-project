@@ -1,6 +1,6 @@
 package br.gov.sp.fatec.springbootapp.security;
 
-import org.hibernate.bytecode.internal.bytebuddy.PassThroughInterceptor;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,35 +15,37 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	private UserDetailsService userDetailsService;
+  @Autowired
+  private UserDetailsService userDetailsService;
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable()
-			.addFilterBefore(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
-				// this disables session creation on Spring Security
-				.sessionManagement()
-				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-	}
+  @Override
+  public void configure(AuthenticationManagerBuilder auth) throws Exception {
+    auth.userDetailsService(userDetailsService);
+  }
 
-	@Override
-	public void configure(AuthenticationManagerBuilder auth) throws Exception{
-		auth.userDetailsService(userDetailsService);
-	}
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+    http.csrf().disable().addFilterBefore(
+      new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+        // this disables session creation on Spring Security
+        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+  }
 
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
+  @Bean
+  public PasswordEncoder passwordEncoderBean() {
+    return new BCryptPasswordEncoder();
+  }
 
-	@Bean
-	@Override
-	public AuthenticationManager authenticationManagerBean() throws Exception{
-		return super.authenticationManagerBean();
-	}
+  @Bean
+  @Override
+  public AuthenticationManager authenticationManagerBean() throws Exception {
+    return super.authenticationManagerBean();
+  }
+
+    
 }

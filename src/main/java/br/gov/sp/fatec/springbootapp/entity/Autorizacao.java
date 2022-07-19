@@ -18,7 +18,7 @@ import br.gov.sp.fatec.springbootapp.controller.View;
 @Entity
 @Table(name = "aut_autorizacao")
 public class Autorizacao {
-    
+
     @JsonView(View.UsuarioCompleto.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,27 +33,28 @@ public class Autorizacao {
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "autorizacoes")
     private Set<Usuario> usuarios;
 
-    public Long getId(){
+    public Long getId() {
         return this.id;
-
     }
-    public void setId(Long id){
+
+    public void setId(Long id) {
         this.id = id;
-
     }
-    public String getNome(){
+
+    public String getNome() {
         return this.nome;
-
     }
-    public void setNome(String nome){
+
+    public void setNome(String nome) {
         this.nome = nome;
-
     }
-    public Set<Usuario> getUsuarios(){
+
+    public Set<Usuario> getUsuarios() {
         return this.usuarios;
     }
-    public void setUsuarios(Set<Usuario> usuarios){
+
+    public void setUsuarios(Set<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
 
-} 
+}
